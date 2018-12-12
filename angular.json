@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "recepies": {
+    "recipes": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/recepies",
+            "outputPath": "dist/recipes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,7 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/scss/main.scss"
             ],
             "scripts": []
           },
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "recepies:build"
+            "browserTarget": "recipes:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "recepies:build:production"
+              "browserTarget": "recipes:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "recepies:build"
+            "browserTarget": "recipes:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "recepies-e2e": {
+    "recipes-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "recepies:serve"
+            "devServerTarget": "recipes:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "recepies:serve:production"
+              "devServerTarget": "recipes:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "recepies"
+  "defaultProject": "recipes"
 }
