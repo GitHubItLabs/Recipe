@@ -5,14 +5,14 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class RecipeService {
+export class ShoppingService {
   endpoint = `${environment.endpoint}`;
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getRecipe() {
-    return this.http.get(this.endpoint + "/recipes")
+  getIngredients() {
+    return this.http.get( this.endpoint + '/ingredients')
   }
 }
